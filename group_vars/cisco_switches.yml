@@ -1,0 +1,3 @@
+# group_vars/cisco_switches.yml
+ansible_network_os: cisco.ios.ios
+ntp_server: 1.1.1.1

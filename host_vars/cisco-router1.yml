@@ -1,0 +1,2 @@
+# host_vars/cisco-router1.yml
+hostname: cisco-router1

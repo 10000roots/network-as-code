@@ -1,0 +1,16 @@
+# playbooks/deploy_base_configs.yml
+---
+- name: DEPLOY BASE CONFIGURATIONS
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: PUSH CONFIG FOR ARISTA EOS DEVICES
+      when: ansible_network_os == 'arista.eos.eos'
+      arista.eos.eos_config:
+        src: ../templates/arista_eos/ntp.j2
+
+    - name: PUSH CONFIG FOR CISCO IOS DEVICES
+      when: ansible_network_os == 'cisco.ios.ios'
+      cisco.ios.ios_config:
+        src: ../templates/cisco_ios/ntp.j2

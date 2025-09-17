@@ -1,0 +1,3 @@
+# group_vars/arista_switches.yml
+ansible_network_os: arista.eos.eos
+ntp_server: 1.1.1.1
